@@ -1,0 +1,39 @@
+.nav-bar {
+  height: 80px;
+  width: 100%;
+  background-color: #000d14;
+  opacity: 0.7;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+ul, .nav-bar, li, a {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  list-style: none;
+  text-decoration: none;
+  padding: 20px;
+  color: White;
+  font-weight: bold;
+}
+
+.header {
+  margin: 0;
+  padding: 0;
+  display: inline;
+  font-size: 80px;
+}
+
+img {
+  margin-right: 0;
+  margin-left: 20px;
+  padding-right: 0;
+}
+
+a:hover {
+  color: #ffbf00;
+}

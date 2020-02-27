@@ -1,0 +1,8 @@
+.park-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 50px;
+  height: 1000px;
+  width: 1200px;
+}

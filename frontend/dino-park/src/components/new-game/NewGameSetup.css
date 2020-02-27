@@ -1,0 +1,59 @@
+.new-game-setup {
+  background-color: White;
+  padding: 20px;
+  display: grid;
+  grid-template-areas: 'heading heading'
+                       'username username-input'
+                       'park-name park-name-input'
+                       'difficulty difficulty-input'
+                       'footer footer';
+  grid-gap: 5px;
+}
+
+.heading {
+  background-color:  #173e51;
+  color: White;
+  grid-area: heading;
+  display: flex;
+  justify-content: center;
+}
+
+.username {
+  grid-area: username;
+  text-align: right;
+}
+
+.username-input {
+  grid-area: username-input;
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.park-name {
+  grid-area: park-name;
+  text-align: right;
+}
+
+.park-name-input {
+  grid-area: park-name-input;
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.difficulty {
+  grid-area: difficulty;
+  text-align: right;
+}
+
+.difficulty-input {
+  padding-left: 20px;
+  grid-area: difficulty-input;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
+  grid-area: footer;
+}

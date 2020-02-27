@@ -1,0 +1,23 @@
+table {
+  background-color: White;
+  padding: 20px;
+  width: 500px;
+}
+
+td {
+  height: 80px;
+  text-align: center;
+}
+
+thead {
+  background-color: #173e51;
+  color: White;
+}
+
+td {
+  border: 1px solid #173e51;
+}
+
+tr {
+  margin: 10px 0;
+}

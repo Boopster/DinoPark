@@ -1,0 +1,52 @@
+.window {
+  background-color: White;
+  height: 700px;
+  width: 1000px;
+  display: grid;
+  grid-template-areas: 'banner'
+                       'form'
+                       'guide';
+  grid-gap: 5px;
+  grid-template-rows: 100px 300px 300px;
+  border-radius: 5px;
+}
+
+.banner {
+  grid-area: 'banner';
+  border-bottom: 1px solid LightGray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  grid-area: 'form';
+}
+
+.guide {
+  display: grid;
+  grid-template-areas: 'text'
+                       'next';
+  grid-template-rows: 150px 150px;
+  grid-area: 'guide';
+  border-top: 1px solid LightGray;
+}
+
+.text {
+  font-family: 'Monkey Island 1990';
+  grid-area: 'text';
+  padding: 10px 30px 0 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.next {
+  grid-area: 'next';
+  display: flex;
+  justify-content: center;
+}
+
+img, h2 {
+  margin: 0 auto;
+  font-size: 40px;
+}
