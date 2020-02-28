@@ -5,28 +5,31 @@ import './WelcomeAnimation.css';
 const WelcomeAnimation = ({changeGameState}) => {
 
   const [guideWelcomeCount, setGuideWelcomeCount] = useState(0);
-  const [onClick, setOnClick] = useState()
+  const [btnValue, setBtnValue] = useState("1");
   const [guideWelcome] = useState(
     [
       'Welcome to the legendary, lost "Boo Boo Island"!',
-      "My name is Montgomery Phileas Hunter, and I will be your guide, and faithful companion as you settle-in on the island.",
+      "My name is Montgomery Phileas Hunter",
+      "and I will be your guide, and faithful companion",
+      "as you settle-in on the island.",
       "I do hope you don't mind me being so forward...",
       "...but I must say...",
-      "...we were all a bit surprised you gave up your dream of being a software developer to take up the position as the new DinoPark TM Manager.",
-      "Anyway!... enough idle chit chat... I have such a good feeling about this!",
+      "...we were all a bit surprised you gave up",
+      "your dream of becoming a software developer",
+      "to take up the position as the new DinoPark TM Manager.",
+      "Anyway!... enough idle chit chat...",
+      "I have such a good feeling about this!",
       "Let's get you started!!!"
     ]
   );
 
-  if (guideWelcomeCount !== guideWelcome.length) {
-
-  }
-
   const guideWelcomeCounter = (event) => {
     const currentCount = guideWelcomeCount + parseInt(event.target.value);
-    setGuideWelcomeCount(currentCount);
     if (currentCount === guideWelcome.length) {
-      changeGameState("start-game");
+      setBtnValue("play");
+      changeGameState(event);
+    } else {
+      setGuideWelcomeCount(currentCount);
     }
   }
 
@@ -46,7 +49,7 @@ const WelcomeAnimation = ({changeGameState}) => {
               title="Next"
               className="button"
               onClick={guideWelcomeCounter}
-              value="1"
+              value={btnValue}
             />
           </div>
         </div>

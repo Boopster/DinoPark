@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import InitialState from './title-screen/InitialState';
 import LoadGame from '../components/load-game/LoadGame';
 import NewGameSetup from '../components/new-game/NewGameSetup';
+import WelcomeAnimation from './new-game/WelcomeAnimation';
 import PlayGame from './PlayGame';
 
 const MainContainer = () => {
@@ -24,6 +25,14 @@ const MainContainer = () => {
     return (
       <>
         <NewGameSetup
+          changeGameState={changeGameState}
+        />
+      </>
+    );
+  } else if (gameState === 'welcome-animation') {
+    return (
+      <>
+        <WelcomeAnimation
           changeGameState={changeGameState}
         />
       </>

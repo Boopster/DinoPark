@@ -45,7 +45,7 @@ const NewGameSetup = ({changeGameState}) => {
             title="Create Game"
             onClick={changeGameState}
             className="button"
-            value="game"
+            value="welcome-animation"
           />
         </div>
       </div>
