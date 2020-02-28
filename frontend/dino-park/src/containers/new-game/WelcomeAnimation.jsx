@@ -39,7 +39,7 @@ const WelcomeAnimation = ({changeGameState}) => {
         <div className="banner">
           <h2>Welcome to DinoPark&trade;</h2>
         </div>
-        <div className="form"></div>
+        <div className="montgomery"></div>
         <div className="guide">
           <div className="text">
             <p>{guideWelcome[guideWelcomeCount]}</p>
