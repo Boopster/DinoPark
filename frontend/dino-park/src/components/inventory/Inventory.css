@@ -4,7 +4,8 @@
   grid-template-rows: 100px;
   grid-template-columns: 100px 100px 100px 100px;
   grid-gap: 10px;
-  background-color: White;
+  background-color: Black;
+  border: 1px solid Turquoise;
   padding: 20px;
   height: 100px;
   width: 430px;
@@ -12,24 +13,24 @@
 
 .inventory-item-1 {
   grid-area: inventory-item-1;
-  border: 1px solid Black;
+  border: 1px solid Turquoise;
   border-radius: 2px;
 }
 
 .inventory-item-2 {
   grid-area: inventory-item-2;
-  border: 1px solid Black;
+  border: 1px solid Turquoise;
   border-radius: 2px;
 }
 
 .inventory-item-3 {
   grid-area: inventory-item-3;
-  border: 1px solid Black;
+  border: 1px solid Turquoise;
   border-radius: 2px;
 }
 
 .inventory-item-4 {
   grid-area: inventory-item-4;
-  border: 1px solid Black;
+  border: 1px solid Turquoise;
   border-radius: 2px;
 }
