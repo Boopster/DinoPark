@@ -8,7 +8,7 @@ const NavBar = () => {
       <img height="80" width="80" src={require("../../images/Sprite400.png")} alt="mushroom"/>
         <ul>
           <li>
-            <h1 className="header">DinoPark</h1>
+            <h1 className="header">DinoPark&trade;</h1>
           </li>
           <li className="navLink">
             <a href="/game">View Park</a>

@@ -1,12 +1,7 @@
 table {
   background-color: White;
-  padding: 20px;
-  width: 500px;
-}
-
-td {
-  height: 80px;
-  text-align: center;
+  padding: 0.5rem;
+  width: 20rem;
 }
 
 thead {
@@ -14,10 +9,11 @@ thead {
   color: White;
 }
 
-td {
-  border: 1px solid #173e51;
-}
-
 tr {
   margin: 10px 0;
+}
+
+td {
+  text-align: center;
+  border: 0.05rem solid #173e51;
 }

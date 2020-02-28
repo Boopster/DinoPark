@@ -1,13 +1,16 @@
 img {
   margin: 0 20px;
+  height: 4rem;
+  width: 4rem;
 }
 
 .title {
   margin: 20px auto 100px auto;
   color: White;
-  font-size: 200px;
+  font-size: 5rem;
   animation-name: showTitle;
   animation-duration: 4s;
+  min-width: 700px;
 }
 
 @keyframes showTitle {

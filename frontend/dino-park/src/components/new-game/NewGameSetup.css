@@ -1,59 +1,76 @@
 .new-game-setup {
   background-color: White;
-  padding: 20px;
+  padding: 0.5rem;
   display: grid;
   grid-template-areas: 'heading heading'
                        'username username-input'
                        'park-name park-name-input'
                        'difficulty difficulty-input'
                        'footer footer';
-  grid-gap: 5px;
+  grid-gap: 0.2rem;
+  width: 15rem;
 }
 
 .heading {
   background-color:  #173e51;
   color: White;
   grid-area: heading;
-  display: flex;
   justify-content: center;
+  font-size: 0.75rem;
 }
 
 .username {
   grid-area: username;
-  text-align: right;
 }
 
 .username-input {
   grid-area: username-input;
-  padding-left: 20px;
-  display: flex;
-  align-items: center;
 }
 
 .park-name {
   grid-area: park-name;
-  text-align: right;
 }
 
 .park-name-input {
   grid-area: park-name-input;
-  padding-left: 20px;
-  display: flex;
-  align-items: center;
 }
 
 .difficulty {
   grid-area: difficulty;
-  text-align: right;
 }
 
 .difficulty-input {
-  padding-left: 20px;
   grid-area: difficulty-input;
-  display: flex;
   flex-direction: column;
 }
 
 .footer {
   grid-area: footer;
+}
+
+.heading, .username-input, .park-name-input, .difficulty-input {
+  display: flex;
+}
+
+.username-input, .park-name-input {
+  align-items: center;
+}
+
+.username-input, .park-name-input, .difficulty-input {
+  padding-left: 0.5rem;
+}
+
+.username, .park-name, .difficulty {
+  text-align: right;
+
+}
+
+.username, .park-name, .difficulty, .difficulty-input {
+  font-size: 0.6rem;
+}
+
+#text-input {
+  height: 1rem;
+  width: 9rem;
+  font-size: 0.5rem;
 }

@@ -18,13 +18,13 @@ const NewGameSetup = ({changeGameState}) => {
           <p>Username:</p>
         </div>
         <div className="username-input">
-          <input name="username" type="text" placeholder="Enter username.."/>
+          <input id="text-input" name="username" type="text" placeholder="Enter username.."/>
         </div>
         <div className="park-name">
           <p>Park Name:</p>
         </div>
         <div className="park-name-input">
-          <input name="park-name" type="text" placeholder="Enter park name.."/>
+          <input id="text-input" name="park-name" type="text" placeholder="Enter park name.."/>
         </div>
         <div className="difficulty">
           <p>Difficulty:</p>
@@ -34,7 +34,7 @@ const NewGameSetup = ({changeGameState}) => {
             <input id="easy" name="difficulty" type="radio" value="easy"/>Easy
           </label>
           <label forHtml="normal">
-            <input id="normal" name="difficulty" type="radio" value="normal"/>Normal
+            <input id="normal" name="difficulty" type="radio" value="normal" checked/>Normal
           </label>
           <label forHtml="hard">
             <input id="hard" name="difficulty" type="radio" value="hard"/>Hard
