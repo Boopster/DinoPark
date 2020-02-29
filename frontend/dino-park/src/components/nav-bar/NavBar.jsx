@@ -5,7 +5,7 @@ const NavBar = () => {
   return (
     <>
       <div className="nav-bar">
-      <img height="80" width="80" src={require("../../images/Sprite400.png")} alt="mushroom"/>
+      <img className="nav-img" src={require("../../images/Sprite400.png")} alt="mushroom"/>
         <ul>
           <li>
             <h1 className="header">DinoPark&trade;</h1>

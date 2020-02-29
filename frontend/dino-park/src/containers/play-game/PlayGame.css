@@ -2,7 +2,65 @@
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  padding: 50px;
-  height: 1000px;
-  width: 1200px;
+  height: 26rem;
+  /* animation: blurFocus ease-in 4s;
+  -webkit-animation: blurFocus ease-in 4s;
+  -moz-animation: blurFocus ease-in 4s;
+  -o-animation: blurFocus ease-in 4s;
+  -ms-animation: blurFocus ease-in 4s; */
 }
+
+/* @keyframes blurFocus {
+0% {
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+}
+100% {
+  filter: blur(0);
+  -webkit-filter: blur(0);
+}
+}
+
+@-moz-keyframes blurFocus {
+0% {
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+}
+100% {
+  filter: blur(0);
+  -webkit-filter: blur(0);
+}
+}
+
+@-webkit-keyframes blurFocus {
+0% {
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+}
+100% {
+  filter: blur(0);
+  -webkit-filter: blur(0);
+}
+}
+
+@-o-keyframes blurFocus {
+0% {
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+}
+100% {
+  filter: blur(0);
+  -webkit-filter: blur(0);
+}
+}
+
+@-ms-keyframes blurFocus {
+0% {
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+}
+100% {
+  filter: blur(0);
+  -webkit-filter: blur(0);
+}
+} */

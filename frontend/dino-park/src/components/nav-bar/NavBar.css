@@ -1,8 +1,7 @@
 .nav-bar {
-  height: 80px;
+  height: 8%;
   width: 100%;
   background-color: #000d14;
-  opacity: 0.7;
   position: fixed;
   top: 0;
   left: 0;
@@ -16,7 +15,7 @@ ul, .nav-bar, li, a {
   justify-content: center;
   list-style: none;
   text-decoration: none;
-  padding: 20px;
+  padding: 0.5rem;
   color: White;
   font-weight: bold;
 }
@@ -27,12 +26,15 @@ ul, .nav-bar, li, a {
   display: inline;
 }
 
-img {
-  margin-right: 0;
-  margin-left: 20px;
-  padding-right: 0;
+.nav-img {
+  height: 3rem;
+  width: 3rem;
 }
 
 a:hover {
   color: #ffbf00;
+}
+
+a {
+  font-size: 0.6rem;
 }

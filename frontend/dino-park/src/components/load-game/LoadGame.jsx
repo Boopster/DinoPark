@@ -26,6 +26,8 @@ const LoadGame = ({changeGameState}) => {
           <Button
             title="Load Game"
             className="button"
+            onClick={changeGameState}
+            value="play-game"
           />
           <Button
             title="Return to Title Screen"
