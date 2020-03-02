@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import Button from '../../components/button/Button';
 import './WelcomeAnimation.css';
 
@@ -32,6 +32,8 @@ const WelcomeAnimation = ({changeGameState}) => {
       setGuideWelcomeCount(currentCount);
     }
   }
+
+    useEffect(()=>{},[guideWelcome, guideWelcomeCount]);
 
   return (
     <>

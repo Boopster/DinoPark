@@ -1,7 +1,7 @@
 .window {
   background-color: White;
   height: 26rem;
-  width: 30rem;
+  width: 40rem;
   display: grid;
   grid-template-areas: 'banner'
                        'montgomery'
@@ -25,20 +25,25 @@
   display: grid;
   grid-template-areas: 'text'
                        'next';
-  grid-template-rows: 5rem 5rem;
+  grid-template-rows: 0.6rem 5rem;
   grid-area: 'guide';
   border-top: 1px solid LightGray;
 }
 
 .text {
-  font-family: 'Monkey Island 1990';
-  font-size: 0.5rem;
   grid-area: 'text';
-  padding: 10px 30px 0 30px;
+  margin-top: 2rem;
+}
+
+.text p {
+  font-family: 'Monkey Island 1990', monospace;
+  font-size: 0.5rem;
+  margin: 0 auto;
 }
 
 .next {
   grid-area: 'next';
+  margin-top: 3rem;
 }
 
 h2 {
