@@ -56,6 +56,7 @@ const MainContainer = () => {
       <>
         <LoadGame
           changeGameState={changeGameState}
+          savedGames={savedGames}
         />
       </>
     );

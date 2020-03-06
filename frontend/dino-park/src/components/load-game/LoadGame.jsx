@@ -2,23 +2,31 @@ import React from 'react';
 import './LoadGame.css';
 import Button from '../../components/button/Button';
 
-const LoadGame = ({changeGameState}) => {
+const LoadGame = ({savedGames, changeGameState}) => {
+
+  const savedGamesList = savedGames.map((g, id) => (
+    <tr key={id}>
+      <td>{g.username}</td>
+      <td>{g.parkName}</td>
+    </tr>
+  ));
+
   return (
     <>
       <div className="top-bottom-grid">
         <div className="top">
           <table>
-            <thead><tr><td>Saved Games</td></tr></thead>
+            <thead>
+              <tr>
+                <td colSpan="2">Saved Games</td>
+              </tr>
+              <tr>
+                <td>User:</td>
+                <td>Park:</td>
+              </tr>
+            </thead>
             <tbody>
-              <tr>
-                <td>Saved Game 1</td>
-              </tr>
-              <tr>
-                <td>Saved Game 2</td>
-              </tr>
-              <tr>
-                <td>Saved Game 3</td>
-              </tr>
+              {savedGamesList}
             </tbody>
           </table>
         </div>
