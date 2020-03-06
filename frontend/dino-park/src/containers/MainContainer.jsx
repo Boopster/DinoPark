@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import InitialState from './title-screen/InitialState';
 import LoadGame from '../components/load-game/LoadGame';
 import NewGameSetup from '../components/new-game/NewGameSetup';
@@ -8,6 +8,20 @@ import PlayGame from './play-game/PlayGame';
 const MainContainer = () => {
 
   const [gameState, setGameState] = useState('initial-state');
+  const [savedGames, setSavedGames] = useState();
+
+  const url = "api/games";
+
+  useEffect(() => {
+    loadData();
+  },[]);
+
+  const loadData = async () => {
+    const response = await fetch(url);
+    const data = await response.json();
+    setSavedGames(data);
+    console.log(data);
+  };
 
   const changeGameState = (event) => {
     setGameState(event.target.value);

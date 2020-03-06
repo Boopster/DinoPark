@@ -16,13 +16,16 @@ public class Game {
     @Column(name = "difficulty")
     private String difficulty;
     @Column(name = "balance")
-    private Long balance;
+    private int balance;
 
-    public Game(String username, String parkName, String difficulty, Long balance) {
+    public Game(String username, String parkName, String difficulty, int balance) {
         this.username = username;
         this.parkName = parkName;
         this.difficulty = difficulty;
         this.balance = balance;
+    }
+
+    public Game() {
     }
 
     public Long getId() {
@@ -57,11 +60,11 @@ public class Game {
         this.difficulty = difficulty;
     }
 
-    public Long getBalance() {
+    public int getBalance() {
         return balance;
     }
 
-    public void setBalance(Long balance) {
+    public void setBalance(int balance) {
         this.balance = balance;
     }
 }

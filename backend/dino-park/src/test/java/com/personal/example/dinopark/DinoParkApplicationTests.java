@@ -1,13 +1,28 @@
 package com.personal.example.dinopark;
 
-import org.junit.jupiter.api.Test;
+import com.personal.example.dinopark.models.Game;
+import com.personal.example.dinopark.repositories.GameRepository;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 
+@RunWith(SpringRunner.class)
 @SpringBootTest
-class DinoParkApplicationTests {
+public class DinoParkApplicationTests {
+
+	@Autowired
+	GameRepository gameRepository;
 
 	@Test
-	void contextLoads() {
+	public void contextLoads() {
+	}
+
+	@Test
+	public void createGameAndSave(){
+		Game game = new Game("Jack", "Sparrow", "normal", 2000);
+		gameRepository.save(game);
 	}
 
 }
