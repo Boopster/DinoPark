@@ -4,9 +4,12 @@ import com.personal.example.dinopark.models.Game;
 import com.personal.example.dinopark.repositories.GameRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.mockito.internal.matchers.Equals;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+
+import static org.junit.Assert.assertEquals;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -20,9 +23,10 @@ public class DinoParkApplicationTests {
 	}
 
 	@Test
-	public void createGameAndSave(){
+	public void canCreateGameAndSave(){
 		Game game = new Game("Jack", "Sparrow", "normal", 2000);
 		gameRepository.save(game);
+		assertEquals("Jack", game.getUsername());
 	}
 
 }

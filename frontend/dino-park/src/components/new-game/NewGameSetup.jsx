@@ -2,9 +2,23 @@ import React from 'react';
 import './NewGameSetup.css';
 import Button from '../button/Button'
 
-const NewGameSetup = ({changeGameState}) => {
+const NewGameSetup = ({handleSaveGame, changeGameState}) => {
 
-  const saveGame = (event) => {
+  const saveGame = async (event) => {
+    event.preventDefault();
+    let balance = 0;
+    if (event.target.difficulty.value === "easy") {
+      balance = 2000;
+    } else {
+      balance = 1000;
+    }
+    const game = {
+      "username": event.target.username.value,
+      "parkName": event.target.parkname.value,
+      "difficulty": event.target.difficulty.value,
+      "balance": balance
+    }
+    handleSaveGame(game);
     changeGameState(event);
   }
 
@@ -24,28 +38,29 @@ const NewGameSetup = ({changeGameState}) => {
           <p>Park Name:</p>
         </div>
         <div className="park-name-input">
-          <input id="text-input" name="park-name" type="text" placeholder="Enter park name.."/>
+          <input id="text-input" name="parkname" type="text" placeholder="Enter park name.."/>
         </div>
         <div className="difficulty">
           <p>Difficulty:</p>
         </div>
         <div className="difficulty-input">
-          <label forHtml="easy">
+          <label forhtml="easy">
             <input id="easy" name="difficulty" type="radio" value="easy"/>Easy
           </label>
-          <label forHtml="normal">
-            <input id="normal" name="difficulty" type="radio" value="normal" checked/>Normal
+          <label forhtml="normal">
+            <input id="normal" name="difficulty" type="radio" value="normal" defaultChecked/>Normal
           </label>
-          <label forHtml="hard">
+          <label forhtml="hard">
             <input id="hard" name="difficulty" type="radio" value="hard"/>Hard
           </label>
         </div>
         <div className="footer">
           <Button
             title="Create Game"
-            onClick={changeGameState}
+            onClick={saveGame}
             className="button"
             value="welcome-animation"
+            type="submit"
           />
         </div>
       </div>

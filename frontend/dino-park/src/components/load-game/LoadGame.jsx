@@ -36,12 +36,14 @@ const LoadGame = ({savedGames, changeGameState}) => {
             className="button"
             onClick={changeGameState}
             value="play-game"
+            type="button"
           />
           <Button
             title="Return to Title Screen"
             className="button"
             onClick={changeGameState}
             value="initial-state"
+            type="button"
           />
         </div>
       </div>

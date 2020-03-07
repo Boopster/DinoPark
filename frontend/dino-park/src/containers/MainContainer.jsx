@@ -27,6 +27,14 @@ const MainContainer = () => {
     setGameState(event.target.value);
   }
 
+  const handleSaveGame = async (game) => {
+    const response = await fetch(url, {
+      method: "POST",
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify(game)
+    });
+  }
+
   if (gameState === 'initial-state') {
     return (
       <>
@@ -40,6 +48,7 @@ const MainContainer = () => {
       <>
         <NewGameSetup
           changeGameState={changeGameState}
+          handleSaveGame={handleSaveGame}
         />
       </>
     );

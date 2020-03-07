@@ -67,4 +67,6 @@ public class Game {
     public void setBalance(int balance) {
         this.balance = balance;
     }
+
 }
+

@@ -27,12 +27,14 @@ const InitialState = ({changeGameState}) => {
             className={buttonClass}
             onClick={changeGameState}
             value="new-game"
+            type="button"
           />
           <Button
             title="Load Game"
             className={buttonClass}
             onClick={changeGameState}
             value="load-game"
+            type="button"
           />
         </div>
       </div>

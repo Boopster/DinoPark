@@ -52,6 +52,7 @@ const WelcomeAnimation = ({changeGameState}) => {
               className="button"
               onClick={guideWelcomeCounter}
               value={btnValue}
+              type="button"
             />
           </div>
         </div>
