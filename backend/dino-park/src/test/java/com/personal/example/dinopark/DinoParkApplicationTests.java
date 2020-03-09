@@ -26,6 +26,7 @@ public class DinoParkApplicationTests {
 	public void canCreateGameAndSave(){
 		Game game = new Game("Jack", "Sparrow", "normal", 2000);
 		gameRepository.save(game);
+
 		assertEquals("Jack", game.getUsername());
 	}
 

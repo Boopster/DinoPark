@@ -1,30 +1,23 @@
 import React from 'react';
 import './NewGameSetup.css';
-import Button from '../button/Button'
+import FormButton from '../button/FormButton';
 
-const NewGameSetup = ({handleSaveGame, changeGameState}) => {
+const NewGameSetup = ({handlePostGame}) => {
 
-  const saveGame = async (event) => {
+  const saveGame = (event) => {
     event.preventDefault();
-    let balance = 0;
-    if (event.target.difficulty.value === "easy") {
-      balance = 2000;
-    } else {
-      balance = 1000;
-    }
     const game = {
       "username": event.target.username.value,
       "parkName": event.target.parkname.value,
       "difficulty": event.target.difficulty.value,
-      "balance": balance
+      "balance": 2000
     }
-    handleSaveGame(game);
-    changeGameState(event);
+    handlePostGame(game);
   }
 
   return (
     <>
-      <div className="new-game-setup">
+      <form onSubmit={saveGame} className="new-game-setup">
         <div className="heading">
           <p>Create New Game</p>
         </div>
@@ -55,15 +48,13 @@ const NewGameSetup = ({handleSaveGame, changeGameState}) => {
           </label>
         </div>
         <div className="footer">
-          <Button
+          <FormButton
             title="Create Game"
-            onClick={saveGame}
             className="button"
-            value="welcome-animation"
             type="submit"
           />
         </div>
-      </div>
+      </form>
     </>
   );
 

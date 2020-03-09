@@ -16,7 +16,7 @@ public class GameController {
     @Autowired
     GameRepository gameRepository;
 
-    @RequestMapping(value="/games", method= RequestMethod.GET)
+    @RequestMapping(value="/games")
     public List<Game> getAllGames(){
         return gameRepository.findAll();
     }
