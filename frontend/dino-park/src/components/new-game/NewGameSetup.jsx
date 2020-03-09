@@ -25,13 +25,13 @@ const NewGameSetup = ({handlePostGame}) => {
           <p>Username:</p>
         </div>
         <div className="username-input">
-          <input id="text-input" name="username" type="text" placeholder="Enter username.."/>
+          <input id="text-input" name="username" type="text" required="required" placeholder="Enter username.."/>
         </div>
         <div className="park-name">
           <p>Park Name:</p>
         </div>
         <div className="park-name-input">
-          <input id="text-input" name="parkname" type="text" placeholder="Enter park name.."/>
+          <input id="text-input" name="parkname" type="text" required="required" placeholder="Enter park name.."/>
         </div>
         <div className="difficulty">
           <p>Difficulty:</p>
