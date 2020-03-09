@@ -16,6 +16,7 @@ public class DataLoader implements ApplicationRunner {
     public DataLoader() {
     }
 
+    @Override
     public void run(ApplicationArguments args) throws Exception {
         Game game1 = new Game("Boopster", "Dino World", "easy", 2000);
         gameRepository.save(game1);

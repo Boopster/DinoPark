@@ -24,10 +24,10 @@ public class DinoParkApplicationTests {
 
 	@Test
 	public void canCreateGameAndSave(){
+		int intialGamesCount = gameRepository.findAll().size();
 		Game game = new Game("Jack", "Sparrow", "normal", 2000);
 		gameRepository.save(game);
-
-		assertEquals("Jack", game.getUsername());
+		assertEquals(intialGamesCount + 1, gameRepository.findAll().size());
 	}
 
 }
