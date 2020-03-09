@@ -8,13 +8,13 @@ import PlayGame from './play-game/PlayGame';
 const MainContainer = () => {
 
   const [gameState, setGameState] = useState('initial-state');
-  const [savedGames, setSavedGames] = useState();
+  const [savedGames, setSavedGames] = useState([]);
 
   const url = "api/games";
 
   useEffect(() => {
     loadData();
-  },[]);
+  }, [gameState]);
 
   const loadData = async () => {
     const response = await fetch(url);
