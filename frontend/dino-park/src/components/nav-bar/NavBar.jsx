@@ -11,16 +11,16 @@ const NavBar = () => {
             <h1 className="header">DinoPark&trade;</h1>
           </li>
           <li className="navLink">
-            <a href="/game">View Park</a>
+            <a href="/park">Park</a>
           </li>
           <li className="navLink">
-            <a href="/shop">Shop</a>
+            <a href="/supples">Supplies</a>
           </li>
           <li className="navLink">
-            <a href="/dashboard">View Dashboard</a>
+            <a href="/dashboard">Dashboard</a>
           </li>
           <li>
-            <a href="/help">Help</a>
+            <a href="/menu">Menu</a>
           </li>
         </ul>
       </div>
