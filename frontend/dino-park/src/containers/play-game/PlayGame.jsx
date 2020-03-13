@@ -5,12 +5,18 @@ import Inventory from '../../components/inventory/Inventory';
 import Shop from '../../components/shop/Shop';
 
 const PlayGame = () => {
-  const [showView] = useState("park-view");
+  const [showView, setShowView] = useState("park-view");
+
+  const changeView = (event) => {
+    setShowView(event.target.value);
+  };
 
   if (showView === "park-view") {
     return (
       <>
-        <NavBar/>
+        <NavBar
+          changeView={changeView}
+        />
         <div className="park-container">
           <Inventory/>
         </div>

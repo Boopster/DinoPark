@@ -1,7 +1,7 @@
 import React from 'react';
 import './NavBar.css';
 
-const NavBar = () => {
+const NavBar = ({changeView}) => {
   return (
     <>
       <div className="nav-bar">
@@ -14,7 +14,7 @@ const NavBar = () => {
             <a href="/park">Park</a>
           </li>
           <li className="navLink">
-            <a href="/supples">Supplies</a>
+            <a href="#" onClick={changeView} value="shop-view">Supplies</a>
           </li>
           <li className="navLink">
             <a href="/dashboard">Dashboard</a>
