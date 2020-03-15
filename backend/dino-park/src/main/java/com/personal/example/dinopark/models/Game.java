@@ -1,9 +1,8 @@
 package com.personal.example.dinopark.models;
 
-import javax.persistence.*;
-
 public class Game {
 
+    private Long Id;
     private String username;
     private String difficulty;
     private int balance;
@@ -19,6 +18,14 @@ public class Game {
     }
 
     public Game() {
+    }
+
+    public Long getId() {
+        return Id;
+    }
+
+    public void setId(Long id) {
+        Id = id;
     }
 
     public String getUsername() {
