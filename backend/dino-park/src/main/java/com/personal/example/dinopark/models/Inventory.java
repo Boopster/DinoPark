@@ -8,6 +8,10 @@ public class Inventory {
     private int medicineCount;
 
     public Inventory() {
+        this.meatCount = 0;
+        this.mushroomCount = 0;
+        this.dinoEggCount = 0;
+        this.medicineCount = 0;
     }
 
     public int getMeatCount() {

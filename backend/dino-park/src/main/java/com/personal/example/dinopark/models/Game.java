@@ -2,21 +2,12 @@ package com.personal.example.dinopark.models;
 
 import javax.persistence.*;
 
-@Entity
-@Table(name="games")
 public class Game {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long Id;
-    @Column(name = "username")
+
     private String username;
-    @Column(name = "difficulty")
     private String difficulty;
-    @Column(name = "balance")
     private int balance;
-
     private Park park;
-
     private Inventory inventory;
 
     public Game(String username, String parkName, String difficulty) {
@@ -28,14 +19,6 @@ public class Game {
     }
 
     public Game() {
-    }
-
-    public Long getId() {
-        return Id;
-    }
-
-    public void setId(Long id) {
-        this.Id = id;
     }
 
     public String getUsername() {
