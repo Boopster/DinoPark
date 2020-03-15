@@ -1,5 +1,6 @@
 import React from 'react';
 import './NavBar.css';
+import Button from '../button/Button';
 
 const NavBar = ({changeView}) => {
   return (
@@ -11,10 +12,10 @@ const NavBar = ({changeView}) => {
             <h1 className="header">DinoPark&trade;</h1>
           </li>
           <li className="navLink">
-            <a href="/park">Park</a>
+            <Button className="nav-button" onClick={changeView} type="button" value="park-view">Park</Button>
           </li>
           <li className="navLink">
-            <a href="#" onClick={changeView} value="shop-view">Supplies</a>
+            <Button className="nav-button" onClick={changeView} type="button" value="shop-view">Supplies</Button>
           </li>
           <li className="navLink">
             <a href="/dashboard">Dashboard</a>
@@ -25,7 +26,7 @@ const NavBar = ({changeView}) => {
         </ul>
       </div>
     </>
-  )
-}
+  );
+};
 
 export default NavBar;

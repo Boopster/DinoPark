@@ -10,18 +10,21 @@ public class Game {
     private Long Id;
     @Column(name = "username")
     private String username;
-    @Column(name = "parkName")
-    private String parkName;
     @Column(name = "difficulty")
     private String difficulty;
     @Column(name = "balance")
     private int balance;
 
-    public Game(String username, String parkName, String difficulty, int balance) {
+    private Park park;
+
+    private Inventory inventory;
+
+    public Game(String username, String parkName, String difficulty) {
         this.username = username;
-        this.parkName = parkName;
+        this.park = new Park(parkName);
         this.difficulty = difficulty;
-        this.balance = balance;
+        this.balance = 2000;
+        this.inventory = new Inventory();
     }
 
     public Game() {
@@ -39,16 +42,16 @@ public class Game {
         return username;
     }
 
-    public String getParkName() {
-        return parkName;
+    public Park getPark() {
+        return park;
     }
 
     public void setUsername(String username) {
         this.username = username;
     }
 
-    public void setParkName(String parkName) {
-        this.parkName = parkName;
+    public void setPark(Park park) {
+        this.park = park;
     }
 
     public String getDifficulty() {
@@ -67,5 +70,13 @@ public class Game {
         this.balance = balance;
     }
 
+    public Inventory getInventory() {
+        return inventory;
+    }
+
+    public void setInventory(Inventory inventory) {
+        this.inventory = inventory;
+    }
+    
 }
 

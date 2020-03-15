@@ -25,7 +25,11 @@ const PlayGame = () => {
   } else {
     return (
       <>
-        <Shop/>
+        <NavBar
+          changeView={changeView}
+        />
+        <Shop
+        />
       </>
     );
   };

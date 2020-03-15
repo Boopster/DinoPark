@@ -14,7 +14,7 @@ const Inventory = () => {
           <div className="item-count">0</div>
         </div>
         <div className="inventory-item-3">
-          <img className="inv-img" src={require("../../images/Sprite-egg.png")} alt="dinosaur egg"/>
+          <img className="inv-img"  id="egg" src={require("../../images/Sprite-egg.png")} alt="dinosaur egg"/>
           <div className="item-count">0</div>
         </div>
         <div className="inventory-item-4">
