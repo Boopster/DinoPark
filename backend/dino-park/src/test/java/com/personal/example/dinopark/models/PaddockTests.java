@@ -21,7 +21,7 @@ public class PaddockTests {
     public void setUp() {
         park = new Park("Dino Land");
         paddock = new Paddock(5, 200, park);
-        dinosaur = new Dinosaur("T-Rex", "Carnivore");
+        dinosaur = new Dinosaur("T-Rex", "Carnivore", paddock);
     }
 
     @Test

@@ -12,11 +12,15 @@ import static org.junit.Assert.*;
 @RunWith(SpringRunner.class)
 public class DinosaurTests {
 
+    Park park;
+    Paddock paddock;
     Dinosaur dinosaur;
 
     @Before
     public void setUp() {
-        dinosaur = new Dinosaur("Diplodocus", "Herbivore");
+        park = new Park("Dino Land");
+        paddock = new Paddock(200, 5, park);
+        dinosaur = new Dinosaur("Diplodocus", "Herbivore", paddock);
     }
 
     @Test
@@ -61,6 +65,11 @@ public class DinosaurTests {
     public void canSetAge() {
         dinosaur.setAge(1);
         assertEquals(1, dinosaur.getAge());
+    }
+
+    @Test
+    public void hasPaddock() {
+        assertNotNull(dinosaur.getPaddock());
     }
 
 }

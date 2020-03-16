@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "paddocks")
@@ -20,13 +21,14 @@ public class Paddock {
     @ManyToOne
     @JoinColumn(name = "park_id", nullable = false)
     private Park park;
-//    private ArrayList<Dinosaur> dinosaurs;
+    @OneToMany(mappedBy = "paddock")
+    private List<Dinosaur> dinosaurs;
 
     public Paddock(int capacity, int price, Park park) {
         this.capacity = capacity;
         this.price = price;
         this.park = park;
-//        this.dinosaurs = new ArrayList<Dinosaur>();
+        this.dinosaurs = new ArrayList<Dinosaur>();
     }
 
     public Paddock() {
@@ -64,21 +66,11 @@ public class Paddock {
         this.park = park;
     }
 
+    public int getDinosaurCount() {
+        return this.dinosaurs.size();
+    }
 
-
-    //    public ArrayList<Dinosaur> getDinosaurs() {
-//        return dinosaurs;
-//    }
-//
-//    public void setDinosaurs(ArrayList<Dinosaur> dinosaurs) {
-//        this.dinosaurs = dinosaurs;
-//    }
-//
-//    public int getDinosaurCount() {
-//        return this.dinosaurs.size();
-//    }
-//
-//    public void addDinosaurToPaddock(Dinosaur dinosaur) {
-//        this.dinosaurs.add(dinosaur);
-//    }
+    public void addDinosaurToPaddock(Dinosaur dinosaur) {
+        this.dinosaurs.add(dinosaur);
+    }
 }

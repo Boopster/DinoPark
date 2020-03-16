@@ -17,11 +17,15 @@ public class Dinosaur {
     private int health;
     @Column
     private int age;
+    @ManyToOne
+    @JoinColumn(name = "paddock_id", nullable = false)
+    Paddock paddock;
 
-    public Dinosaur(String species, String diet) {
+    public Dinosaur(String species, String diet, Paddock paddock) {
         this.species = species;
         this.diet = diet;
         this.health = 10;
+        this.paddock = paddock;
     }
 
     public Dinosaur() {
@@ -65,6 +69,14 @@ public class Dinosaur {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    public Paddock getPaddock() {
+        return paddock;
+    }
+
+    public void setPaddock(Paddock paddock) {
+        this.paddock = paddock;
     }
 
 }
