@@ -29,6 +29,14 @@ public class Inventory {
         return meatCount;
     }
 
+    public Long getId() {
+        return Id;
+    }
+
+    public void setId(Long id) {
+        Id = id;
+    }
+
     public void setMeatCount(int meatCount) {
         this.meatCount = meatCount;
     }
