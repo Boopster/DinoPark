@@ -1,5 +1,7 @@
 package com.personal.example.dinopark.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
 
 @Entity
@@ -17,6 +19,7 @@ public class Dinosaur {
     private int health;
     @Column
     private int age;
+    @JsonIgnoreProperties("dinosaurs")
     @ManyToOne
     @JoinColumn(name = "paddock_id", nullable = false)
     Paddock paddock;

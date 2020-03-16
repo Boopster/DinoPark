@@ -8,9 +8,8 @@ const NewGameSetup = ({handlePostGame}) => {
     event.preventDefault();
     const game = {
       "username": event.target.username.value,
-      "parkName": event.target.parkname.value,
       "difficulty": event.target.difficulty.value,
-      "balance": 2000
+      "parkName": event.target.parkname.value
     }
     handlePostGame(game);
   }

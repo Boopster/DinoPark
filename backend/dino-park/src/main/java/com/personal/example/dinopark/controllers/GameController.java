@@ -12,16 +12,11 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping(value="/api")
+@RequestMapping(value="/games")
 public class GameController {
 
     @Autowired
     GameRepository gameRepository;
-
-    @GetMapping(value = "/games")
-    public List<Game> getAllGames() {
-        return gameRepository.findAll();
-    }
 
     @GetMapping("{id}")
     public Optional<Game> getGame(@PathVariable Long Id) {

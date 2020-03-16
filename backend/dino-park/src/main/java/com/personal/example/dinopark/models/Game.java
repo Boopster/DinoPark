@@ -22,7 +22,7 @@ public class Game {
     @JoinColumn(name = "inventory_id", referencedColumnName = "Id")
     private Inventory inventory;
 
-    public Game(String username, String parkName, String difficulty) {
+    public Game(String username, String difficulty, String parkName) {
         this.username = username;
         this.difficulty = difficulty;
         this.balance = 2000;

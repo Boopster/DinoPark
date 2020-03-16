@@ -16,7 +16,7 @@ public class GameTests {
 
     @Before
     public void setUp() {
-        game = new Game("Boopster", "Dino World", "normal");
+        game = new Game("Boopster", "normal", "Dino World");
     }
 
     @Test
@@ -52,14 +52,14 @@ public class GameTests {
         assertEquals(1500, game.getBalance());
     }
 
-    @Test
-    public void hasPark() {
-        assertNotNull(game.getPark());
-    }
-
-    @Test
-    public void hasInventory() {
-        assertNotNull(game.getInventory());
-    }
+//    @Test
+//    public void hasPark() {
+//        assertNotNull(game.getPark());
+//    }
+//
+//    @Test
+//    public void hasInventory() {
+//        assertNotNull(game.getInventory());
+//    }
 
 }

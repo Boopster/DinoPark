@@ -21,7 +21,7 @@ public class DinoParkApplicationTests {
 
 	@Test
 	public void createGame() {
-		Game game = new Game("Boopster", "Dino World", "easy");
+		Game game = new Game("Boopster", "easy", "Dino World");
 		gameRepository.save(game);
 	}
 
