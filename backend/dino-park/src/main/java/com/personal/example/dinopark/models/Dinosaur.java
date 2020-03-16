@@ -1,10 +1,21 @@
 package com.personal.example.dinopark.models;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "dinosaurs")
 public class Dinosaur {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long Id;
+    @Column
     private String species;
+    @Column
     private String diet;
+    @Column
     private int health;
+    @Column
     private int age;
 
     public Dinosaur(String species, String diet) {
@@ -14,6 +25,14 @@ public class Dinosaur {
     }
 
     public Dinosaur() {
+    }
+
+    public Long getId() {
+        return Id;
+    }
+
+    public void setId(Long id) {
+        Id = id;
     }
 
     public String getSpecies() {
