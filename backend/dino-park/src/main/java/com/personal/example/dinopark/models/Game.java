@@ -17,15 +17,16 @@ public class Game {
     private int balance;
 //    @Column
 //    private Park park;
-//    @Column
-//    private Inventory inventory;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "inventory_id", referencedColumnName = "Id")
+    private Inventory inventory;
 
     public Game(String username, String parkName, String difficulty) {
         this.username = username;
 //        this.park = new Park(parkName);
         this.difficulty = difficulty;
         this.balance = 2000;
-//        this.inventory = new Inventory();
+        this.inventory = new Inventory();
     }
 
     public Game() {
@@ -71,13 +72,13 @@ public class Game {
         this.balance = balance;
     }
 
-//    public Inventory getInventory() {
-//        return inventory;
-//    }
-//
-//    public void setInventory(Inventory inventory) {
-//        this.inventory = inventory;
-//    }
+    public Inventory getInventory() {
+        return inventory;
+    }
+
+    public void setInventory(Inventory inventory) {
+        this.inventory = inventory;
+    }
     
 }
 

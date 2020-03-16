@@ -12,13 +12,13 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping(value="/games")
+@RequestMapping(value="/api")
 public class GameController {
 
     @Autowired
     GameRepository gameRepository;
 
-    @GetMapping
+    @GetMapping(value = "/games")
     public List<Game> getAllGames() {
         return gameRepository.findAll();
     }
