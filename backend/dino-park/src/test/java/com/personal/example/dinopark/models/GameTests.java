@@ -30,11 +30,6 @@ public class GameTests {
         assertEquals("Boop", game.getUsername());
     }
 
-//    @Test
-//    public void hasPark() {
-//        assertNotNull(game.getPark());
-//    }
-
     @Test
     public void hasDifficulty() {
         assertEquals("normal", game.getDifficulty());
@@ -57,9 +52,14 @@ public class GameTests {
         assertEquals(1500, game.getBalance());
     }
 
-//    @Test
-//    public void hasInventory() {
-//        assertNotNull(game.getInventory());
-//    }
+    @Test
+    public void hasPark() {
+        assertNotNull(game.getPark());
+    }
+
+    @Test
+    public void hasInventory() {
+        assertNotNull(game.getInventory());
+    }
 
 }

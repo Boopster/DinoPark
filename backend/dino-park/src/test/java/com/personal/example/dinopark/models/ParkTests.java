@@ -18,7 +18,7 @@ public class ParkTests {
     @Before
     public void setUp() {
         park = new Park("Dino World");
-        paddock = new Paddock(5, 200);
+        paddock = new Paddock(5, 200, park);
     }
 
     @Test

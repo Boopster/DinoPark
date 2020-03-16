@@ -7,17 +7,20 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 @SpringBootTest
 @RunWith(SpringRunner.class)
 public class PaddockTests {
 
+    Park park;
     Paddock paddock;
     Dinosaur dinosaur;
 
     @Before
     public void setUp() {
-        paddock = new Paddock(5, 200);
+        park = new Park("Dino Land");
+        paddock = new Paddock(5, 200, park);
         dinosaur = new Dinosaur("T-Rex", "Carnivore");
     }
 
@@ -44,14 +47,19 @@ public class PaddockTests {
     }
 
     @Test
-    public void canGetDinosaurCount() {
-        assertEquals(0, paddock.getDinosaurCount());
+    public void hasPark() {
+        assertNotNull(paddock.getPark());
     }
 
-    @Test
-    public void canAddDinosaurToPaddock() {
-        paddock.addDinosaurToPaddock(dinosaur);
-        assertEquals(1, paddock.getDinosaurCount());
-    }
+//    @Test
+//    public void canGetDinosaurCount() {
+//        assertEquals(0, paddock.getDinosaurCount());
+//    }
+//
+//    @Test
+//    public void canAddDinosaurToPaddock() {
+//        paddock.addDinosaurToPaddock(dinosaur);
+//        assertEquals(1, paddock.getDinosaurCount());
+//    }
 
 }
