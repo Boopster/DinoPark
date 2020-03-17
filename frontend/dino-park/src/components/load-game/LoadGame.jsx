@@ -7,7 +7,8 @@ const LoadGame = ({savedGames, changeGameState}) => {
   const savedGamesList = savedGames.map((g, id) => (
     <tr key={id}>
       <td>{g.username}</td>
-      <td>{g.parkName}</td>
+      <td>{g.difficulty}</td>
+      <td>{g.balance}</td>
     </tr>
   ));
 
@@ -18,11 +19,12 @@ const LoadGame = ({savedGames, changeGameState}) => {
           <table>
             <thead>
               <tr>
-                <td colSpan="2">Saved Games</td>
+                <td colSpan="3">Saved Games</td>
               </tr>
               <tr>
                 <td>User:</td>
-                <td>Park:</td>
+                <td>Difficulty:</td>
+                <td>Balance(£):</td>
               </tr>
             </thead>
             <tbody>
