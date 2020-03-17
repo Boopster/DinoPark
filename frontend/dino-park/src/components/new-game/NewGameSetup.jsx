@@ -9,7 +9,8 @@ const NewGameSetup = ({handlePostGame}) => {
     const game = {
       "username": event.target.username.value,
       "difficulty": event.target.difficulty.value,
-      "parkName": event.target.parkname.value
+      "parkName": event.target.parkname.value,
+      "balance": 2000
     }
     handlePostGame(game);
   }
