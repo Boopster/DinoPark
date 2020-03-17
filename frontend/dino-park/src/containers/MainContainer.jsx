@@ -19,7 +19,7 @@ const MainContainer = () => {
   const loadData = async () => {
     const response = await fetch(url);
     const data = await response.json();
-    setSavedGames(data._embedded.games);
+    setSavedGames(data);
     console.log(data);
   };
 
