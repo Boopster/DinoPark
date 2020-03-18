@@ -41,19 +41,6 @@ const MainContainer = () => {
       setGameState("welcome-animation");
   };
 
-  const handlePostInventory = async () => {
-    const inventory = {};
-    const response = await fetch(urlInventory, {
-      method: 'POST',
-      headers: {
-        'Content-Type':'application/json'
-      },
-      body:JSON.stringify(inventory)
-    })
-      const data = await response.json();
-      return data;
-  };
-
   if (gameState === 'initial-state') {
     return (
       <>
@@ -68,7 +55,6 @@ const MainContainer = () => {
         <NewGameSetup
           changeGameState={changeGameState}
           handlePostGame={handlePostGame}
-          handlePostInventory={handlePostInventory}
         />
       </>
     );
