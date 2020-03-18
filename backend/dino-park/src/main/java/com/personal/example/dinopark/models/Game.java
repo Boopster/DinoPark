@@ -25,7 +25,6 @@ public class Game {
     public Game(String username, String difficulty) {
         this.username = username;
         this.difficulty = difficulty;
-//        this.inventory = new Inventory();
     }
 
     public Game() {

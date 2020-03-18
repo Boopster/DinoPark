@@ -10,23 +10,15 @@ public class Inventory {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Id;
     @Column
-    private int meatCount;
+    private int meatCount = 0;
     @Column
-    private int mushroomCount;
+    private int mushroomCount = 0;
     @Column
-    private int dinoEggCount;
+    private int dinoEggCount = 0;
     @Column
-    private int medicineCount;
+    private int medicineCount = 0;
 
     public Inventory() {
-        this.meatCount = 0;
-        this.mushroomCount = 0;
-        this.dinoEggCount = 0;
-        this.medicineCount = 0;
-    }
-
-    public int getMeatCount() {
-        return meatCount;
     }
 
     public Long getId() {
@@ -35,6 +27,10 @@ public class Inventory {
 
     public void setId(Long id) {
         Id = id;
+    }
+
+    public int getMeatCount() {
+        return meatCount;
     }
 
     public void setMeatCount(int meatCount) {
