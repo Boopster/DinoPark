@@ -31,16 +31,16 @@ public class DataLoader implements ApplicationRunner {
     @Override
     public void run(ApplicationArguments args) throws Exception {
         Inventory inventory = new Inventory();
-        Easy game1 = new Easy("Boopster", "easy");
+        Easy game1 = new Easy("Boopster");
         gameRepository.save(game1);
 //        Park park1 = game1.getPark();
 //        Paddock paddock1 = new Paddock(200, 5, park1);
 //        paddockRepository.save(paddock1);
         Inventory inventory2 = new Inventory();
-        Normal game2 = new Normal("Lil-Rox", "normal");
+        Normal game2 = new Normal("Lil-Rox");
         gameRepository.save(game2);
         Inventory inventory3 = new Inventory();
-        Easy game3 = new Easy("Shark Girl", "easy");
+        Easy game3 = new Easy("Shark Girl");
         gameRepository.save(game3);
     }
 

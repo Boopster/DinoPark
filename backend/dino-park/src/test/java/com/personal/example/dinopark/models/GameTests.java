@@ -19,7 +19,7 @@ public class GameTests {
     @Before
     public void setUp() {
         inventory = new Inventory();
-        game = new Easy("Boopster", "normal");
+        game = new Easy("Boopster");
     }
 
     @Test
@@ -35,13 +35,13 @@ public class GameTests {
 
     @Test
     public void hasDifficulty() {
-        assertEquals("normal", game.getDifficulty());
+        assertEquals("easy", game.getDifficulty());
     }
 
     @Test
     public void canSetDifficulty() {
-        game.setDifficulty("easy");
-        assertEquals("easy", game.getDifficulty());
+        game.setDifficulty("normal");
+        assertEquals("normal", game.getDifficulty());
     }
 
 //    @Test

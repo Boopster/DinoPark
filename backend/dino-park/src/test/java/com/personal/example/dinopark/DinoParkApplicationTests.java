@@ -29,7 +29,7 @@ public class DinoParkApplicationTests {
 	@Test
 	public void createGameAndInventory() {
 		Inventory inventory = new Inventory();
-		Easy game = new Easy("Boopster", "easy");
+		Easy game = new Easy("Boopster");
 		game.setInventory(inventory);
 		easyRepository.save(game);
 		assertNotNull(game.getInventory());
