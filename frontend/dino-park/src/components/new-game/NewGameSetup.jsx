@@ -2,15 +2,15 @@ import React from 'react';
 import './NewGameSetup.css';
 import FormButton from '../button/FormButton';
 
-const NewGameSetup = ({handlePostGame}) => {
+const NewGameSetup = ({handlePostGame, handlePostInventory}) => {
 
   const saveGame = (event) => {
     event.preventDefault();
+    const inventory = handlePostInventory();
     const game = {
       "username": event.target.username.value,
       "difficulty": event.target.difficulty.value,
-      "parkName": event.target.parkname.value,
-      "balance": 2000
+      "inventory_id": inventory
     }
     handlePostGame(game);
   }

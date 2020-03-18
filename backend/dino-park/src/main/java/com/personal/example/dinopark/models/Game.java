@@ -14,19 +14,17 @@ public class Game {
     @Column
     private String difficulty;
     @Column
-    private int balance;
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "game_id", referencedColumnName = "Id")
-    private Park park;
+    private int balance = 2000;
+//    @OneToOne(cascade = CascadeType.ALL)
+//    @JoinColumn(name = "park_id", referencedColumnName = "Id")
+//    private Park park;
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "inventory_id", referencedColumnName = "Id")
     private Inventory inventory;
 
-    public Game(String username, String difficulty, String parkName) {
+    public Game(String username, String difficulty) {
         this.username = username;
         this.difficulty = difficulty;
-        this.balance = 2000;
-        this.park = new Park(parkName);
         this.inventory = new Inventory();
     }
 
@@ -73,13 +71,13 @@ public class Game {
         this.inventory = inventory;
     }
 
-        public Park getPark() {
-        return park;
-    }
-
-    public void setPark(Park park) {
-        this.park = park;
-    }
+//        public Park getPark() {
+//        return park;
+//    }
+//
+//    public void setPark(Park park) {
+//        this.park = park;
+//    }
     
 }
 

@@ -11,6 +11,7 @@ const MainContainer = () => {
   const [savedGames, setSavedGames] = useState([]);
 
   const url = "api/games";
+  const urlInventory = "api/inventories";
 
   useEffect(() => {
     loadData();
@@ -19,7 +20,7 @@ const MainContainer = () => {
   const loadData = async () => {
     const response = await fetch(url);
     const data = await response.json();
-    setSavedGames(data);
+    setSavedGames(data._embedded.games);
     console.log(data);
   };
 
@@ -28,15 +29,29 @@ const MainContainer = () => {
   };
 
   const handlePostGame = async (game) => {
-    return await fetch(url, {
+    const response = await fetch(url, {
       method: 'POST',
       headers: {
         'Content-Type':'application/json'
       },
       body:JSON.stringify(game)
-    }).then(() => {
+    })
+      const data = await response.json();
+      console.log(data);
       setGameState("welcome-animation");
-    });
+  };
+
+  const handlePostInventory = async () => {
+    const inventory = {};
+    const response = await fetch(urlInventory, {
+      method: 'POST',
+      headers: {
+        'Content-Type':'application/json'
+      },
+      body:JSON.stringify(inventory)
+    })
+      const data = await response.json();
+      return data;
   };
 
   if (gameState === 'initial-state') {
@@ -53,6 +68,7 @@ const MainContainer = () => {
         <NewGameSetup
           changeGameState={changeGameState}
           handlePostGame={handlePostGame}
+          handlePostInventory={handlePostInventory}
         />
       </>
     );

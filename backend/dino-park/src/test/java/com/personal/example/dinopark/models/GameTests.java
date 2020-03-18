@@ -13,10 +13,12 @@ import static org.junit.Assert.*;
 public class GameTests {
 
     Game game;
+    Inventory inventory;
 
     @Before
     public void setUp() {
-        game = new Game("Boopster", "normal", "Dino World");
+        inventory = new Inventory();
+        game = new Game("Boopster", "normal");
     }
 
     @Test
@@ -52,13 +54,14 @@ public class GameTests {
         assertEquals(1500, game.getBalance());
     }
 
-    @Test
-    public void hasPark() {
-        assertNotNull(game.getPark());
-    }
+//    @Test
+//    public void hasPark() {
+//        assertNotNull(game.getPark());
+//    }
 
     @Test
     public void hasInventory() {
+        game.setInventory(inventory);
         assertNotNull(game.getInventory());
     }
 

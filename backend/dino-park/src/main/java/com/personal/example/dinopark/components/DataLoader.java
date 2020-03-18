@@ -1,9 +1,11 @@
 package com.personal.example.dinopark.components;
 
 import com.personal.example.dinopark.models.Game;
+import com.personal.example.dinopark.models.Inventory;
 import com.personal.example.dinopark.models.Paddock;
 import com.personal.example.dinopark.models.Park;
 import com.personal.example.dinopark.repositories.GameRepository;
+import com.personal.example.dinopark.repositories.InventoryRepository;
 import com.personal.example.dinopark.repositories.PaddockRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
@@ -17,6 +19,9 @@ public class DataLoader implements ApplicationRunner {
     GameRepository gameRepository;
 
     @Autowired
+    InventoryRepository inventoryRepository;
+
+    @Autowired
     PaddockRepository paddockRepository;
 
     public DataLoader() {
@@ -24,14 +29,17 @@ public class DataLoader implements ApplicationRunner {
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
-        Game game1 = new Game("Boopster", "easy", "Dino World");
+        Inventory inventory = new Inventory();
+        Game game1 = new Game("Boopster", "easy");
         gameRepository.save(game1);
-        Park park1 = game1.getPark();
-        Paddock paddock1 = new Paddock(200, 5, park1);
-        paddockRepository.save(paddock1);
-        Game game2 = new Game("Lil-Rox", "easy", "Dino Land");
+//        Park park1 = game1.getPark();
+//        Paddock paddock1 = new Paddock(200, 5, park1);
+//        paddockRepository.save(paddock1);
+        Inventory inventory2 = new Inventory();
+        Game game2 = new Game("Lil-Rox", "easy");
         gameRepository.save(game2);
-        Game game3 = new Game("Shark Girl", "easy", "T-Rex World");
+        Inventory inventory3 = new Inventory();
+        Game game3 = new Game("Shark Girl", "easy");
         gameRepository.save(game3);
     }
 
