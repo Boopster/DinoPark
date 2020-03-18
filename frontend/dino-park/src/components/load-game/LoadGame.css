@@ -17,3 +17,7 @@ td {
   text-align: center;
   border: 0.05rem solid #173e51;
 }
+
+.saved-game:hover {
+  background-color: #ffbf00;
+}

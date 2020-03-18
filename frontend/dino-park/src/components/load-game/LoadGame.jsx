@@ -5,10 +5,10 @@ import Button from '../../components/button/Button';
 const LoadGame = ({savedGames, changeGameState}) => {
 
   const savedGamesList = savedGames.map((g, id) => (
-    <tr key={id}>
+    <tr key={id} className="saved-game">
       <td>{g.username}</td>
       <td>{g.difficulty}</td>
-      <td>{g.balance}</td>
+      <td>£{g.balance}</td>
     </tr>
   ));
 
@@ -24,7 +24,7 @@ const LoadGame = ({savedGames, changeGameState}) => {
               <tr>
                 <td>User:</td>
                 <td>Difficulty:</td>
-                <td>Balance(£):</td>
+                <td>Balance:</td>
               </tr>
             </thead>
             <tbody>
