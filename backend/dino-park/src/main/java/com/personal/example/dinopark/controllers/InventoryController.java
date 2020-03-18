@@ -1,6 +1,5 @@
 package com.personal.example.dinopark.controllers;
 
-import com.personal.example.dinopark.models.Game;
 import com.personal.example.dinopark.models.Inventory;
 import com.personal.example.dinopark.repositories.InventoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;

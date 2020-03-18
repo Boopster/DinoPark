@@ -1,10 +1,13 @@
-package com.personal.example.dinopark.models;
+package com.personal.example.dinopark.models.games;
+
+import com.personal.example.dinopark.models.Inventory;
 
 import javax.persistence.*;
 
 @Entity
 @Table(name = "games")
-public class Game {
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+public abstract class Game {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -13,8 +16,8 @@ public class Game {
     private String username;
     @Column
     private String difficulty;
-    @Column
-    private int balance = 2000;
+//    @Column
+//    private int balance = 2000;
 //    @OneToOne(cascade = CascadeType.ALL)
 //    @JoinColumn(name = "park_id", referencedColumnName = "Id")
 //    private Park park;
@@ -54,13 +57,13 @@ public class Game {
         this.difficulty = difficulty;
     }
 
-    public int getBalance() {
-        return balance;
-    }
-
-    public void setBalance(int balance) {
-        this.balance = balance;
-    }
+//    public int getBalance() {
+//        return balance;
+//    }
+//
+//    public void setBalance(int balance) {
+//        this.balance = balance;
+//    }
 
     public Inventory getInventory() {
         return inventory;

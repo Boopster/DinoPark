@@ -1,7 +1,7 @@
 package com.personal.example.dinopark.controllers;
 
-import com.personal.example.dinopark.models.Game;
-import com.personal.example.dinopark.repositories.GameRepository;
+import com.personal.example.dinopark.models.games.Game;
+import com.personal.example.dinopark.repositories.games.GameRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.web.bind.annotation.RequestMapping;

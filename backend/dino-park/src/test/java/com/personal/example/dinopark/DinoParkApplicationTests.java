@@ -1,8 +1,8 @@
 package com.personal.example.dinopark;
 
-import com.personal.example.dinopark.models.Game;
+import com.personal.example.dinopark.models.games.Easy;
 import com.personal.example.dinopark.models.Inventory;
-import com.personal.example.dinopark.repositories.GameRepository;
+import com.personal.example.dinopark.repositories.games.EasyRepository;
 import com.personal.example.dinopark.repositories.InventoryRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -17,7 +17,7 @@ import static org.junit.Assert.*;
 public class DinoParkApplicationTests {
 
 	@Autowired
-	GameRepository gameRepository;
+	EasyRepository easyRepository;
 
 	@Autowired
 	InventoryRepository inventoryRepository;
@@ -29,9 +29,9 @@ public class DinoParkApplicationTests {
 	@Test
 	public void createGameAndInventory() {
 		Inventory inventory = new Inventory();
-		Game game = new Game("Boopster", "easy");
+		Easy game = new Easy("Boopster", "easy");
 		game.setInventory(inventory);
-		gameRepository.save(game);
+		easyRepository.save(game);
 		assertNotNull(game.getInventory());
 	}
 
