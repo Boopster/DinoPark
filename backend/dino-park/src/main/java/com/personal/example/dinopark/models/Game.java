@@ -20,12 +20,12 @@ public class Game {
 //    private Park park;
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "inventory_id", referencedColumnName = "Id")
-    private Inventory inventory;
+    private Inventory inventory = new Inventory();
 
     public Game(String username, String difficulty) {
         this.username = username;
         this.difficulty = difficulty;
-        this.inventory = new Inventory();
+//        this.inventory = new Inventory();
     }
 
     public Game() {
