@@ -14,8 +14,8 @@ public abstract class Game {
     private Long Id;
     @Column
     private String username;
-    @Column
-    private String difficulty;
+//    @Column
+//    private String difficulty;
 //    @Column
 //    private int balance = 2000;
 //    @OneToOne(cascade = CascadeType.ALL)
@@ -25,9 +25,9 @@ public abstract class Game {
     @JoinColumn(name = "inventory_id", referencedColumnName = "Id")
     private Inventory inventory = new Inventory();
 
-    public Game(String username, String difficulty) {
+    public Game(String username) {
         this.username = username;
-        this.difficulty = difficulty;
+//        this.difficulty = difficulty;
     }
 
     public Game() {
@@ -49,13 +49,13 @@ public abstract class Game {
         this.username = username;
     }
 
-    public String getDifficulty() {
-        return difficulty;
-    }
-
-    public void setDifficulty(String difficulty) {
-        this.difficulty = difficulty;
-    }
+//    public String getDifficulty() {
+//        return difficulty;
+//    }
+//
+//    public void setDifficulty(String difficulty) {
+//        this.difficulty = difficulty;
+//    }
 
 //    public int getBalance() {
 //        return balance;

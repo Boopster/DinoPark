@@ -9,13 +9,24 @@ import javax.persistence.Entity;
 public class Easy extends Game {
 
     @Column
+    private String difficulty = "easy";
+
+    @Column
     private int balance = 2000;
 
-    public Easy(String username, String difficulty) {
-        super(username, difficulty);
+    public Easy(String username) {
+        super(username);
     }
 
     public Easy() {
+    }
+
+    public String getDifficulty() {
+        return difficulty;
+    }
+
+    public void setDifficulty(String difficulty) {
+        this.difficulty = difficulty;
     }
 
     public int getBalance() {
