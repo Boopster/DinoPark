@@ -10,8 +10,7 @@ const MainContainer = () => {
   const [gameState, setGameState] = useState('initial-state');
   const [savedGames, setSavedGames] = useState([]);
 
-  const url = "api/games";
-  const urlEasy = "api/easyGames"
+  const url = "api/";
   const urlInventory = "api/inventories";
 
   useEffect(() => {
@@ -19,7 +18,7 @@ const MainContainer = () => {
   }, [gameState]);
 
   const loadData = async () => {
-    const response = await fetch(url);
+    const response = await fetch(url+'games');
     const data = await response.json();
     setSavedGames(data._embedded.games);
     console.log(data);
@@ -29,8 +28,8 @@ const MainContainer = () => {
     setGameState(event.target.value);
   };
 
-  const handlePostGame = async (game) => {
-    const response = await fetch(urlEasy, {
+  const handlePostGame = async (game, difficulty) => {
+    const response = await fetch(`${url}${difficulty}Games`, {
       method: 'POST',
       headers: {
         'Content-Type':'application/json'

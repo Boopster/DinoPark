@@ -9,7 +9,8 @@ const NewGameSetup = ({handlePostGame}) => {
     const game = {
       "username": event.target.username.value
     }
-    handlePostGame(game);
+    const difficulty = event.target.difficulty.value;
+    handlePostGame(game, difficulty);
   }
 
   return (
