@@ -1,6 +1,7 @@
 package com.personal.example.dinopark.models;
 
 import com.personal.example.dinopark.models.games.EasyGame;
+import com.personal.example.dinopark.models.games.NormalGame;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -13,46 +14,58 @@ import static org.junit.Assert.*;
 @RunWith(SpringRunner.class)
 public class GameTests {
 
-    EasyGame game;
-    Inventory inventory;
+    EasyGame game1;
+    NormalGame game2;
+    Inventory inventory1;
 
     @Before
     public void setUp() {
-        inventory = new Inventory();
-        game = new EasyGame("Boopster");
+        inventory1 = new Inventory();
+        game1 = new EasyGame("Boopster");
+        game2 = new NormalGame("Lily");
     }
 
     @Test
     public void hasUsername() {
-        assertEquals("Boopster", game.getUsername());
+        assertEquals("Boopster", game1.getUsername());
     }
 
     @Test
     public void canSetUsername() {
-        game.setUsername("Boop");
-        assertEquals("Boop", game.getUsername());
+        game1.setUsername("Boop");
+        assertEquals("Boop", game1.getUsername());
     }
 
     @Test
-    public void hasDifficulty() {
-        assertEquals("easy", game.getDifficulty());
+    public void hasDifficultyEasy() {
+        assertEquals("easy", game1.getDifficulty());
+    }
+
+    @Test
+    public void hasDifficultyNormal() {
+        assertEquals("normal", game2.getDifficulty());
     }
 
     @Test
     public void canSetDifficulty() {
-        game.setDifficulty("normal");
-        assertEquals("normal", game.getDifficulty());
+        game1.setDifficulty("normal");
+        assertEquals("normal", game1.getDifficulty());
     }
 
     @Test
-    public void hasBalance() {
-        assertEquals(2000, game.getBalance());
+    public void hasBalanceEasy() {
+        assertEquals(2000, game1.getBalance());
+    }
+
+    @Test
+    public void hasBalanceNormal() {
+        assertEquals(1500, game2.getBalance());
     }
 
     @Test
     public void canSetBalance() {
-        game.setBalance(1500);
-        assertEquals(1500, game.getBalance());
+        game1.setBalance(1500);
+        assertEquals(1500, game1.getBalance());
     }
 
 //    @Test
@@ -62,8 +75,8 @@ public class GameTests {
 
     @Test
     public void hasInventory() {
-        game.setInventory(inventory);
-        assertNotNull(game.getInventory());
+        game1.setInventory(inventory1);
+        assertNotNull(game1.getInventory());
     }
 
 }

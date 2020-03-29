@@ -1,4 +1,4 @@
-package com.personal.example.dinopark.controllers;
+package com.personal.example.dinopark.controllers.games;
 
 import com.personal.example.dinopark.models.games.EasyGame;
 import com.personal.example.dinopark.repositories.games.EasyRepository;

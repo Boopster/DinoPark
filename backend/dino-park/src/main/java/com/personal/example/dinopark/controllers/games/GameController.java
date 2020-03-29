@@ -1,18 +1,11 @@
-package com.personal.example.dinopark.controllers;
+package com.personal.example.dinopark.controllers.games;
 
 import com.personal.example.dinopark.models.games.Game;
 import com.personal.example.dinopark.repositories.games.GameRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-
-import org.springframework.web.bind.annotation.RequestMapping;
-
-import org.springframework.web.bind.annotation.RestController;
-
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
-
-
 
 @RequestMapping(value="/games")
 public class GameController {
