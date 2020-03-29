@@ -1,9 +1,8 @@
 package com.personal.example.dinopark;
 
-import com.personal.example.dinopark.models.games.Easy;
+import com.personal.example.dinopark.models.games.EasyGame;
 import com.personal.example.dinopark.models.Inventory;
 import com.personal.example.dinopark.repositories.games.EasyRepository;
-import com.personal.example.dinopark.repositories.InventoryRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,9 +18,6 @@ public class DinoParkApplicationTests {
 	@Autowired
 	EasyRepository easyRepository;
 
-	@Autowired
-	InventoryRepository inventoryRepository;
-
 	@Test
 	public void contextLoads() {
 	}
@@ -29,7 +25,7 @@ public class DinoParkApplicationTests {
 	@Test
 	public void createGameAndInventory() {
 		Inventory inventory = new Inventory();
-		Easy game = new Easy("Boopster");
+		EasyGame game = new EasyGame("Boopster");
 		game.setInventory(inventory);
 		easyRepository.save(game);
 		assertNotNull(game.getInventory());

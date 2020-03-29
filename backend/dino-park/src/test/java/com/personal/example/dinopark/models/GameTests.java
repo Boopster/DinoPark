@@ -1,6 +1,6 @@
 package com.personal.example.dinopark.models;
 
-import com.personal.example.dinopark.models.games.Easy;
+import com.personal.example.dinopark.models.games.EasyGame;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -13,13 +13,13 @@ import static org.junit.Assert.*;
 @RunWith(SpringRunner.class)
 public class GameTests {
 
-    Easy game;
+    EasyGame game;
     Inventory inventory;
 
     @Before
     public void setUp() {
         inventory = new Inventory();
-        game = new Easy("Boopster");
+        game = new EasyGame("Boopster");
     }
 
     @Test
@@ -44,16 +44,16 @@ public class GameTests {
         assertEquals("normal", game.getDifficulty());
     }
 
-//    @Test
-//    public void hasBalance() {
-//        assertEquals(2000, game.getBalance());
-//    }
-//
-//    @Test
-//    public void canSetBalance() {
-//        game.setBalance(1500);
-//        assertEquals(1500, game.getBalance());
-//    }
+    @Test
+    public void hasBalance() {
+        assertEquals(2000, game.getBalance());
+    }
+
+    @Test
+    public void canSetBalance() {
+        game.setBalance(1500);
+        assertEquals(1500, game.getBalance());
+    }
 
 //    @Test
 //    public void hasPark() {

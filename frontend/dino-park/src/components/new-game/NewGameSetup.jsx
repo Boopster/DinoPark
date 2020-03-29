@@ -7,8 +7,7 @@ const NewGameSetup = ({handlePostGame}) => {
   const saveGame = (event) => {
     event.preventDefault();
     const game = {
-      "username": event.target.username.value,
-      "difficulty": event.target.difficulty.value,
+      "username": event.target.username.value
     }
     handlePostGame(game);
   }

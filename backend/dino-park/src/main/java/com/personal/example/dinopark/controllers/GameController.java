@@ -13,13 +13,12 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Optional;
 
 
-@RestController
+
 @RequestMapping(value="/games")
 public class GameController {
 
     @Autowired
     GameRepository gameRepository;
-
 
 
     @GetMapping("{id}")

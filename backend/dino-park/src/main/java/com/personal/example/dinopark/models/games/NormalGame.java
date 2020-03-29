@@ -6,7 +6,7 @@ import javax.persistence.Entity;
 
 @Entity
 @DiscriminatorValue("Normal")
-public class Normal extends Game {
+public class NormalGame extends Game {
 
     @Column
     private String difficulty = "normal";
@@ -14,11 +14,11 @@ public class Normal extends Game {
     @Column
     private int balance = 1500;
 
-    public Normal(String username) {
+    public NormalGame(String username) {
         super(username);
     }
 
-    public Normal() {
+    public NormalGame() {
     }
 
     public String getDifficulty() {

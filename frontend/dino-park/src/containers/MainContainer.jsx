@@ -11,6 +11,7 @@ const MainContainer = () => {
   const [savedGames, setSavedGames] = useState([]);
 
   const url = "api/games";
+  const urlEasy = "api/easyGames"
   const urlInventory = "api/inventories";
 
   useEffect(() => {
@@ -29,7 +30,7 @@ const MainContainer = () => {
   };
 
   const handlePostGame = async (game) => {
-    const response = await fetch(url, {
+    const response = await fetch(urlEasy, {
       method: 'POST',
       headers: {
         'Content-Type':'application/json'
